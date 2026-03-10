@@ -1,0 +1,542 @@
+a/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgb(97, 133, 233);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Banner */
+#banner {
+    background: linear-gradient(to right, #00bbd4, #2196f3);
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-image: url("odonto/img/mulherSorrindo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+#banner p {
+    font-size: 20px;
+}
+
+#banner h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+/* Seções */
+section {
+    padding: 60px 10%;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Serviços */
+#servicos {
+    display: flex;
+    gap: 20px;
+}
+
+#servicos-tratamentos {
+    display: flex;
+    gap: 20px;
+}
+
+#servicos h3 {
+    text-align: center;
+}
+
+#servicos-tratamentos h3 {
+    text-align: center;
+    background-color: #00bcd4;
+    border-radius: 5px;
+}
+
+#servicos p {
+    text-align: center;
+}
+
+#servicos-tratamentos p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+
+#servicos article img {
+    width: 100%;
+    max-width: 200px; /* você pode ajustar */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+#servicos-tratamentos article img {
+    width: 100%;
+    max-width: 200px; /* você pode ajustar */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+#servicos article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#servicos-tratamentos article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#servicos-tratamentos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#servicos-tratamentos h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#servicos-tratamentos article {
+    background: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#servicos-tratamentos article h3 {
+    color: white;
+}
+
+/* Imagem responsiva */
+#servicos-tratamentos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Texto */
+#servicos-tratamentos p {
+    text-align: justify;
+    font-size: 0.95rem;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablet */
+@media (min-width: 768px) {
+    #servicos-tratamentos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    #servicos-tratamentos h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #servicos-tratamentos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Container da seção Sobre Nós */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Texto da esquerda */
+.sobre-texto {
+    flex: 1;
+}
+
+/* Imagem da direita */
+.sobre-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#contato {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+/* Container do contato */
+.contato-container {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Formulário */
+.form-contato {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Inputs e textarea */
+.form-contato input,
+.form-contato textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Foco */
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: #00bcd4;
+}
+
+.meu-botao {
+  background-color: #4CAF50; /* verde */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.meu-botao:hover {
+  background-color: #45a049; /* verde mais escuro */
+}
+
+/* Botão */
+.form-contato button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-contato button:hover {
+    background-color: #0097a7;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: rgb(97, 133, 233);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container dos depoimentos */
+.depoimentos-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card individual */
+.card-depoimento {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+#sobre-aparelho {
+  padding: 60px 20px;
+}
+
+.sobre-texto-aparelho {
+  flex: 1;
+}
+
+.sobre-texto-aparelho h2 {
+  margin-bottom: 20px;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.texto-aparelho {
+    padding: 60px;
+}
+
+/* Imagem */
+.container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Texto */
+.texto {
+    width: 50%;
+}
+
+/* Botão */
+.meu-botao {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container img,
+    .texto {
+        width: 100%;
+    }
+}
+
+.texto p {
+    margin-bottom: 20px;
+}
+
+.botao-renove{
+    margin-top: 20px;
+}
+
+#servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Card */
+#servicos article {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+#servicos article h3 {
+    background-color: #00bcd4;
+    border-radius: 5px;
+}
+
+/* Imagem com tamanho padronizado */
+#servicos article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+/* Texto ocupa espaço igual */
+#servicos article p {
+    flex-grow: 1;
+}
+
+/* Hover */
+#servicos article:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+#servicos article:hover img {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+}
+
+/* Efeito ao passar o mouse */
+.card-depoimento:hover {
+    transform: translateY(-5px);
+}
+
+/* Texto */
+.card-depoimento p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Nome */
+.card-depoimento h4 {
+    color: #00bcd4;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 90px;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #servicos {
+        flex-direction: column;
+    }
+}
